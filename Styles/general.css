@@ -1,0 +1,22 @@
+p {
+  margin: 0px;
+}
+
+body {
+  margin: 0px;
+  font-family: roboto, arial;
+  padding-top: 80px;
+  padding-bottom: 20px;
+  padding-left: 95px;
+  padding-right: 25px;
+  background-color: rgb(245, 245, 245);
+}
+
+@media (min-width: 1100px) {
+  body {
+    padding-left: 223px;
+  }
+}
+
+/*In the Japanese dub, the cat speaks to Osaka "Hello everyone. 
+How are you? Fine, thank you!" and Osaka responses with the exclamation that is "OH MAI GAH!".*/

@@ -1,0 +1,245 @@
+.headerFlexbox {
+  height: 55px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  background-color: white;
+  border-bottom-width: 1px;
+  border-bottom-color: rgb(210, 210, 210);
+  border-bottom-style: solid;
+  z-index: 100;
+}
+
+.leftSection {
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+}
+
+.hamburgerMenu {
+  height: 24px;
+  margin-left: 24px;
+  margin-right: 24px;
+  cursor: pointer;
+}
+
+.youtubeLogo {
+  height: 20px;
+  cursor: pointer;
+  margin-left: 6px;
+}
+
+.middleSection {
+  flex: 1;
+  max-width: 500px;
+  margin-left: 70px;
+  margin-right: 35px;
+  display: flex;
+  align-items: center;
+  overflow: visible;
+}
+
+.searchBarInput {
+  flex: 1;
+  height: 37px;
+  padding-left: 10px;
+  font-size: 16px;
+  border: 1px solid rgb(192, 192, 192);
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+  box-shadow: inset 1px 2px 3px rgba(0, 0, 0, 0.05);
+  width: 0px;
+}
+
+.searchBarInput:focus {
+  outline: none;
+}
+
+.searchBarInput::placeholder {
+  font-family: Roboto, Arial;
+  font-size: 16px;
+}
+
+.searchButton {
+  height: 41px;
+  width: 66px;
+  background-color: rgb(240, 240, 240);
+  border: 1px solid rgb(192, 192, 192);
+  margin-left: -1px;
+  cursor: pointer;
+  margin-right: 10px;
+  transition: background-color .2s;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+
+.searchButton:hover {
+  background-color: rgb(220, 220, 220);
+}
+
+.searchButton:active {
+  background-color: rgb(210, 210, 210);
+}
+
+.searchButton:hover .tooltip, 
+.voiceButton:hover .tooltip,
+.upload:hover .tooltip,
+.apps:hover .tooltip,
+.notificationsDiv:hover .tooltip,
+.youtubeLogoDiv:hover .tooltip {
+  opacity: 1;
+  z-index: 500;
+}
+
+.searchButton, 
+.voiceButton, 
+.upload, 
+.apps, 
+.notificationsDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.searchButton .tooltip, 
+.voiceButton .tooltip,
+.upload .tooltip,
+.apps .tooltip,
+.notificationsDiv .tooltip {
+  position: absolute;
+  background-color: gray;
+  color: white;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 2px;
+  font-size: 12px;
+  bottom: -30px;
+  opacity: 0;
+  transition: opacity .1s;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.searchPicture {
+  height: 25px;
+}
+
+.voiceButton {
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+  border-style: none;
+  background-color: rgb(245, 245, 245);
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.voiceButton:hover {
+  background-color: rgb(225, 225, 225);
+}
+
+.voiceButton:active {
+  background-color: rgb(205, 205, 205);
+}
+
+.voicePicture {
+  height: 24px;
+}
+
+.rightSection {
+  display: flex;
+  column-gap: 30px;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 20px;
+  flex-shrink: 0;
+}
+
+.uploadPicture {
+  height: 24px;
+}
+
+.appsPicture {
+  height: 24px;
+}
+
+.notificationsDiv {
+  position: relative;
+}
+
+.notificationsPicture {
+  height: 24px;
+}
+
+.notificationsNumber {
+  position: absolute;
+  background-color: rgb(200, 0, 0);
+  color: white;
+  top: -5px;
+  right: -5px;
+  font-size: 12px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 30px;
+}
+
+.channelPicture {
+  height: 32px;
+  width: 32px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 100px;
+  cursor: pointer;
+}
+
+.userChannel {
+  position: relative;
+  z-index: 300;
+}
+
+.userToolTip {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  z-index: 1;
+  height: 70px;
+  background-color: white;
+  border-style: none;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+  padding-left: 10px;
+  padding-right: 20px;
+  bottom: -72px;
+  left: -150px;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity .3s;
+}
+
+.userChannel:hover .userToolTip {
+  opacity: 1;
+}
+
+.toolTipInfo  {
+ padding-left: 10px;
+}
+
+.userName {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.subscriberCount {
+  font-size: 14px;
+  color: gray;
+}
